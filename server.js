@@ -20,6 +20,7 @@ const categoryRoutes = require("./routes/categoryRoutes");
 const specificationRoutes = require("./routes/specificationRoutes");
 const productRoutes = require("./routes/productRoutes");
 const productSpecificationRoutes = require("./routes/productSpecificationRoutes");
+const cartRoutes = require("./routes/cartRoutes");
 
 //Routes
 app.use("/api/user", userRoutes);
@@ -27,6 +28,7 @@ app.use("/api/category", categoryRoutes);
 app.use("/api/specification", specificationRoutes);
 app.use("/api/product", productRoutes);
 app.use("/api/productspecification", productSpecificationRoutes);
+app.use("/api/cart", cartRoutes);
 
 mongoose
   .connect(mongo_uri)
