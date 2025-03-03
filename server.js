@@ -16,9 +16,13 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(cors());
 
 const userRoutes = require("./routes/userRoute");
+const categoryRoutes = require("./routes/categoryRoutes");
+const specificationRoutes = require("./routes/specificationRoutes");
 
 //Routes
 app.use("/api/user", userRoutes);
+app.use("/api/category", categoryRoutes);
+app.use("/api/specification", specificationRoutes);
 
 mongoose
   .connect(mongo_uri)
