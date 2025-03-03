@@ -47,3 +47,5 @@ npm start
 ```
 
 🚀 Your application is now set up and ready to go! 🎉
+
+![Project Preview](assets/erd.png)
