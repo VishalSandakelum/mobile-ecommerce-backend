@@ -11,7 +11,8 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     stock_quantity: { type: Number, required: true },
-    image_url: { type: String },
+    image_base64: { type: String },
+    is_deleted: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

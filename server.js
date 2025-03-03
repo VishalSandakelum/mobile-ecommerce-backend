@@ -18,11 +18,13 @@ app.use(cors());
 const userRoutes = require("./routes/userRoute");
 const categoryRoutes = require("./routes/categoryRoutes");
 const specificationRoutes = require("./routes/specificationRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 //Routes
 app.use("/api/user", userRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/specification", specificationRoutes);
+app.use("/api/product", productRoutes);
 
 mongoose
   .connect(mongo_uri)
