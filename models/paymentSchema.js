@@ -16,11 +16,11 @@ const paymentSchema = new mongoose.Schema(
     payment_status: {
       type: String,
       enum: ["Pending", "Completed", "Failed"],
-      default: "Pending",
+      default: "Completed",
     },
     payment_method: {
       type: String,
-      enum: ["Card", "Cash", "UPI"],
+      enum: ["Card", "Cash"],
       required: true,
     },
   },

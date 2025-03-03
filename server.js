@@ -22,6 +22,7 @@ const productRoutes = require("./routes/productRoutes");
 const productSpecificationRoutes = require("./routes/productSpecificationRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 //Routes
 app.use("/api/user", userRoutes);
@@ -31,6 +32,7 @@ app.use("/api/product", productRoutes);
 app.use("/api/productspecification", productSpecificationRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/order", orderRoutes);
+app.use("/api/payment", paymentRoutes);
 
 mongoose
   .connect(mongo_uri)
