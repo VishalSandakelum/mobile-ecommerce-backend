@@ -25,10 +25,17 @@ router.post(
 
 router.get("/all", authMiddleware, attachUserId, orderController.getAllOrders);
 
-router.get("/one", authMiddleware, orderController.getOrderById);
+router.post("/one", authMiddleware, orderController.getOrderById);
 
 router.put("/update", authMiddleware, adminOnly, orderController.updateOrder);
 
 router.delete("/delete", authMiddleware, orderController.deleteOrder);
+
+router.post(
+  "/all/user",
+  authMiddleware,
+  attachUserId,
+  orderController.getOrdersByUserId
+);
 
 module.exports = router;

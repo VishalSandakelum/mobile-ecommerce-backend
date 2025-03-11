@@ -20,7 +20,7 @@ router.post("/add", authMiddleware, attachUserId, paymentController.addPayment);
 
 router.get("/all", authMiddleware, adminOnly, paymentController.getAllPayments);
 
-router.get("/one", authMiddleware, paymentController.getPaymentByOrderId);
+router.post("/one", authMiddleware, paymentController.getPaymentByOrderId);
 
 router.get(
   "/author/all",

@@ -25,6 +25,7 @@ const productController = {
   },
 
   async getProductById(req, res) {
+    console.log("------->", req.body.id);
     try {
       const product = await productService.getProductById(req.body.id);
       res.status(200).json(product);
@@ -34,6 +35,7 @@ const productController = {
   },
 
   async updateProduct(req, res) {
+    console.log(req.body.id);
     try {
       const updatedProduct = await productService.updateProduct(
         req.body.id,

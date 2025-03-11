@@ -7,7 +7,7 @@ router.post("/add", productController.addProducts);
 
 router.get("/all", productController.getAllProducts);
 
-router.get("/one", productController.getProductById);
+router.post("/one", productController.getProductById);
 
 router.put("/update", productController.updateProduct);
 

@@ -64,6 +64,7 @@ const productService = {
   },
 
   async getProductById(productId) {
+    console.log(productId);
     try {
       let product = await Product.findById(productId).populate("category_id");
       if (!product) throw new Error("Product not found");

@@ -52,6 +52,16 @@ const orderController = {
       res.status(400).json({ message: error.message });
     }
   },
+
+  async getOrdersByUserId(req, res) {
+    try {
+      const { user_id } = req.body;
+      const orders = await orderService.getOrdersByUserId(user_id);
+      res.status(200).json({ message: "Orders fetched successfully", orders });
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  },
 };
 
 module.exports = orderController;
